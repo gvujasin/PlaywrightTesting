@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test-chromium": "playwright test --config=playwright.config.js .tests/login.spec.js --project chromium --headed",
-    "test-firefox": "playwright test --config=playwright.config.js .tests/login.spec.js --project firefox --headed",
-    "test-webkit": "playwright test --config=playwright.config.js .tests/login.spec.js --project webkit --headed"
+    "test-chromium": "playwright test --config=playwright.config.js .tests/login.spec.js --project chromium",
+    "test-firefox": "playwright test --config=playwright.config.js .tests/login.spec.js --project firefox",
+    "test-webkit": "playwright test --config=playwright.config.js .tests/login.spec.js --project webkit"
   },
   "keywords": [],
   "author": "",
