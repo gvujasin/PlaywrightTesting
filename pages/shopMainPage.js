@@ -1,3 +1,5 @@
+import { expect } from "@playwright/test"
+
 exports.shopMainPage = class shopMainPage {
   constructor(page) {
 
@@ -14,7 +16,19 @@ exports.shopMainPage = class shopMainPage {
     this.footerPrivacy = page.getByText('© 2020 Sauce Labs. All Rights')
     this.dropdownList = page.locator('.product_sort_container')
     this.inventoryContainer = '.inventory_container';
+    this.firstItem = page.locator('div').filter({ hasText: /^\$29\.99ADD TO CART$/ }).getByRole('button')
+    this.firstItemAdded = page.getByRole('button', { name: 'REMOVE' })
 
+
+
+  }
+
+  //actions
+
+  async addItemToCart() {
+    
+    await this.firstItem.click();
+    await expect (this.firstItemAdded).toContainText('REMOVE');
 
   }
 }
