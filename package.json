@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "all-tests": "npx playwright test",
     "test-chromium": "playwright test --config=playwright.config.js .tests/login.spec.js --project chromium",
     "test-firefox": "playwright test --config=playwright.config.js .tests/login.spec.js --project firefox",
     "test-webkit": "playwright test --config=playwright.config.js .tests/login.spec.js --project webkit",
