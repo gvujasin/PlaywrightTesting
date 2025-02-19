@@ -5,7 +5,10 @@
   "scripts": {
     "test-chromium": "playwright test --config=playwright.config.js .tests/login.spec.js --project chromium",
     "test-firefox": "playwright test --config=playwright.config.js .tests/login.spec.js --project firefox",
-    "test-webkit": "playwright test --config=playwright.config.js .tests/login.spec.js --project webkit"
+    "test-webkit": "playwright test --config=playwright.config.js .tests/login.spec.js --project webkit",
+    "cart-test-chromium": "playwright test --config=playwright.config.js .tests/cart.spec.js --project chromium",
+    "cart-test-firefox": "playwright test --config=playwright.config.js .tests/cart.spec.js --project firefox",
+    "cart-test-webkit": "playwright test --config=playwright.config.js .tests/cart.spec.js --project webkit"
   },
   "keywords": [],
   "author": "",
