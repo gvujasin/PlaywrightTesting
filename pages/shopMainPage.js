@@ -25,8 +25,33 @@ exports.shopMainPage = class shopMainPage {
 
   //actions
 
+  async checkIfProductsAreLoaded() {
+
+    await expect(this.listOfProducts).toBeVisible();
+  }
+
+  async openDrawer() {
+
+    await expect(this.drawerSideBar).toBeVisible();
+    await this.drawerSideBar.click();
+    await expect(this.openSideBar).toBeVisible();
+    await expect(this.closeSideBar).toBeVisible();
+    await this.closeSideBar.click();
+  }
+
+  async sortingProducts() {
+
+    await expect(this.dropdownList).toBeVisible();
+    await this.dropdownList.selectOption({ label: 'Price (low to high)' });
+    await this.dropdownList.selectOption({ label: 'Price (high to low)' });
+    await this.dropdownList.selectOption({ label: 'Name (A to Z)' });
+    await this.dropdownList.selectOption({ label: 'Name (Z to A)' });
+
+  }
+
   async addItemToCart() {
     
+    await expect(this.firstItem).toBeVisible();
     await this.firstItem.click();
     await expect (this.firstItemAdded).toContainText('REMOVE');
 

@@ -19,9 +19,9 @@ jobs:
       - run: npm run test-chromium
       - run: npm run test-firefox
       - run: npm run test-webkit
-      - run: npm run cart-test-chromium
-      - run: npm run cart-test-firefox
-      - run: npm run cart-test-webkit
+      - run: npm run product-test-chromium
+      - run: npm run product-test-firefox
+      - run: npm run product-test-webkit
 
       - store_artifacts:
           path: ./playwright-report
